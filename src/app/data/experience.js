@@ -1,0 +1,127 @@
+export const experiences = [
+  {
+    id: "must-services",
+    company: "Must Services",
+    position: "Full Stack Developer",
+    type: "Full-time",
+    startDate: "2024",
+    endDate: "Present",
+    isCurrent: true,
+    location: "Remote",
+    description:
+      "Building and maintaining full-stack web applications using Next.js, React, and Node.js. Working on scalable API architecture, database optimization, and delivering production-ready features in an Agile environment.",
+    responsibilities: [
+      "Developing full-stack features using Next.js App Router with Server and Client Components",
+      "Designing and implementing RESTful APIs with Node.js and Express.js",
+      "Optimizing database queries and schema design for MongoDB and PostgreSQL",
+      "Implementing authentication systems with NextAuth.js and JWT",
+      "Collaborating on CI/CD pipelines and Vercel deployments",
+      "Conducting code reviews and maintaining code quality standards",
+    ],
+    technologies: ["Next.js","React","Node.js","MongoDB","PostgreSQL","NextAuth.js","Tailwind CSS","Vercel","Git"],
+  },
+  {
+    id: "m-techub",
+    company: "M Techub LLC",
+    position: "Full Stack Developer",
+    type: "Full-time",
+    startDate: "2023",
+    endDate: "2024",
+    isCurrent: false,
+    location: "Remote",
+    description:
+      "Developed multiple full-stack applications for US-based clients. Worked across the complete development lifecycle from requirements gathering to production deployment, with a focus on Next.js applications with advanced SEO optimization.",
+    responsibilities: [
+      "Built Next.js applications leveraging SSR and SSG for optimal SEO performance",
+      "Implemented real-time features using Socket.IO for messaging and live updates",
+      "Integrated payment gateways including Stripe for SaaS and e-commerce applications",
+      "Developed cross-platform mobile applications using React Native and Expo",
+      "Built RESTful APIs with Express.js and maintained SQL/NoSQL databases",
+      "Implemented video conferencing features using Zoom SDK and Agora",
+    ],
+    technologies: ["Next.js","React","React Native","Expo","Node.js","Express.js","MongoDB","PostgreSQL","Socket.IO","Agora","Zoom SDK","Stripe","Redux Toolkit"],
+    projects: ["MCare Hospital Management System", "Oferta Marketplace"],
+  },
+  {
+    id: "alphinex-solutions",
+    company: "Alphinex Solutions",
+    position: "Full Stack Developer",
+    type: "Full-time",
+    startDate: "2023",
+    endDate: "2023",
+    isCurrent: false,
+    location: "Rawalpindi, Pakistan",
+    description:
+      "Contributed to enterprise web application development with a focus on React frontend development and Node.js backend services.",
+    responsibilities: [
+      "Developed responsive React.js frontends following mobile-first design principles",
+      "Built Node.js/Express.js REST APIs integrated with SQL databases",
+      "Implemented user authentication and role-based access control",
+      "Optimized application performance and loading times",
+    ],
+    technologies: ["React","Node.js","Express.js","SQL","PostgreSQL","Redux","Tailwind CSS","Material UI","Git"],
+    projects: ["Iyaloja IMS", "EPOS Stack Management"],
+  },
+  {
+    id: "wq-softwares",
+    company: "WQ Softwares",
+    position: "Junior Full Stack Developer",
+    type: "Full-time",
+    startDate: "2022",
+    endDate: "2023",
+    isCurrent: false,
+    location: "Rawalpindi, Pakistan",
+    description:
+      "Started professional career building web applications with React and Node.js. Gained foundational experience in full-stack development, database design, and collaborative software development.",
+    responsibilities: [
+      "Developed React.js components and frontend features",
+      "Built REST API endpoints with Express.js and Node.js",
+      "Designed and managed MongoDB databases",
+      "Implemented responsive UI with Tailwind CSS",
+    ],
+    technologies: ["React","Node.js","Express.js","MongoDB","JavaScript","Tailwind CSS","Git"],
+  },
+  {
+    id: "nausaltech",
+    company: "NausalTech",
+    position: "Frontend Developer (Internship)",
+    type: "Internship",
+    startDate: "2022",
+    endDate: "2022",
+    isCurrent: false,
+    location: "Remote",
+    description:
+      "Completed a frontend development internship focused on React.js and modern CSS frameworks. Built and maintained web interfaces and learned industry best practices.",
+    responsibilities: [
+      "Built React.js UI components from Figma designs",
+      "Implemented responsive layouts with CSS and Tailwind CSS",
+      "Integrated REST APIs into React applications",
+    ],
+    technologies: ["React","JavaScript","HTML5","CSS3","Tailwind CSS","Redux","Git"],
+  },
+  {
+    id: "kpitb",
+    company: "KPITB",
+    position: "Web Development Trainee",
+    type: "Training",
+    startDate: "2021",
+    endDate: "2022",
+    isCurrent: false,
+    location: "Peshawar, Pakistan",
+    description:
+      "Completed a government-sponsored web development training program at the Khyber Pakhtunkhwa Information Technology Board. Gained foundational knowledge and built real-world projects.",
+    responsibilities: [
+      "Completed structured training in HTML, CSS, and JavaScript",
+      "Built web projects using React.js fundamentals",
+      "Developed portfolio projects demonstrating acquired skills",
+    ],
+    technologies: ["HTML5","CSS3","JavaScript","React","Node.js","MongoDB"],
+  },
+];
+
+export function getAllExperiences() {
+  return experiences;
+}
+export function getCurrentExperience() {
+  return experiences.find((e) => e.isCurrent);
+}

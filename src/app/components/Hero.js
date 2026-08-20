@@ -36,17 +36,24 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Main Heading */}
+            {/* Main Heading — SEO H1 */}
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-white leading-[1.15] mb-5 tracking-tight">
-              Hi, I&apos;m <br />
+              <span className="block text-slate-400 text-2xl sm:text-3xl font-semibold mb-1">Hi, I&apos;m</span>
               <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(249,115,22,0.3)]">
                 Rahmat Ullah
+              </span>
+              <span className="block text-2xl sm:text-3xl font-bold text-white/90 mt-2">
+                Full Stack Developer
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-slate-300 text-base sm:text-lg max-w-xl leading-relaxed mb-6 font-normal">
-              I build scalable, high-performance web applications that solve real-world problems and create impact.
+            <p className="text-slate-300 text-base sm:text-lg max-w-xl leading-relaxed mb-3 font-normal">
+              MERN Stack &amp; Next.js Developer building scalable web applications, 
+              AI-powered features, and real-time systems for businesses worldwide.
+            </p>
+            <p className="text-slate-400 text-sm max-w-xl leading-relaxed mb-6">
+              Specialized in <span className="text-orange-400 font-medium">Next.js</span> · <span className="text-orange-400 font-medium">React</span> · <span className="text-orange-400 font-medium">Node.js</span> · <span className="text-orange-400 font-medium">MongoDB</span> · <span className="text-orange-400 font-medium">PostgreSQL</span>
             </p>
 
             {/* Feature Pills */}
@@ -65,24 +72,31 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
-                href="#projects"
+                href="/projects"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-[0_4px_20px_rgba(249,115,22,0.4)] hover:shadow-[0_6px_28px_rgba(249,115,22,0.6)] transition-all duration-300 hover:-translate-y-0.5"
               >
-                View My Work
+                View My Projects
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
 
               <a
-                href="/Rahmat_Ullah_Resume.pdf"
-                download
+                href="/contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm text-slate-200 bg-slate-900/80 border border-slate-700 hover:border-orange-500/70 hover:text-white transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
               >
-                Download CV
-                <svg className="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                Contact Me
+              </a>
+
+              <a
+                href="/Rahmat_Ullah_Resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl font-semibold text-sm text-slate-400 hover:text-orange-400 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
+                Resume
               </a>
             </div>
 
