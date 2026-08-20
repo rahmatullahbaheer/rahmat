@@ -15,25 +15,56 @@ export async function generateMetadata({ params }) {
 
   if (!post) return { title: "Article Not Found" };
 
+  const tagKeywords = post.tags.flatMap((tag) => [
+    tag,
+    `${tag} tutorial`,
+    `${tag} guide`,
+    `${tag} best practices`,
+  ]);
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: `${post.title} | Rahmat Ullah — Developer Blog`,
+    description: `${post.excerpt} Written by Rahmat Ullah, Full Stack Developer specializing in ${post.tags.slice(0, 4).join(", ")}.`,
+    keywords: [
+      ...tagKeywords,
+      post.category,
+      "web development tutorial",
+      "developer guide",
+      "full stack developer blog",
+      "Next.js developer blog",
+      "React developer blog",
+      "Rahmat Ullah blog",
+      "developer article",
+      "programming tutorial",
+    ],
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
-      title: post.title,
+      title: `${post.title} | Rahmat Ullah`,
       description: post.excerpt,
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: [post.author],
+      authors: ["https://rahmatullah.dev/about"],
+      siteName: "Rahmat Ullah — Full Stack Developer",
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: `${post.title} — Developer Article by Rahmat Ullah`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
+      creator: "@rahmatullah_dev",
       title: post.title,
       description: post.excerpt,
+      images: ["/og-image.jpg"],
     },
   };
 }
+
 
 export default async function BlogArticlePage({ params }) {
   const { slug } = await params;

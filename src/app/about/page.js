@@ -1,13 +1,31 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
+import { aboutPageKeywords } from "../lib/keywords";
 
-export const metadata = createPageMetadata(
-  "About Rahmat Ullah",
-  "Learn about Rahmat Ullah — Full Stack Developer with 2+ years building scalable web applications with Next.js, React, Node.js, MongoDB, and PostgreSQL. Based in Rawalpindi, Pakistan.",
-  "/about"
-);
+export const metadata = {
+  title: "About Rahmat Ullah — Full Stack Developer | MERN Stack",
+  description:
+    "Learn about Rahmat Ullah, a Full Stack Developer (MERN Stack) with 2+ years of professional experience building scalable web applications using Next.js, React.js, Node.js, MongoDB, and PostgreSQL. Specializing in AI integration, real-time apps, and React Native mobile development. Based in Rawalpindi, Pakistan — available globally.",
+  keywords: aboutPageKeywords,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Rahmat Ullah — Full Stack Developer | MERN Stack & Next.js",
+    description:
+      "Full Stack Developer with 2+ years building scalable web apps. Expert in Next.js, React, Node.js, MongoDB, PostgreSQL, TypeScript, AI integrations & React Native. Based in Pakistan — remote-friendly.",
+    url: "https://rahmatullah.dev/about",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "About Rahmat Ullah — Full Stack Developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "About Rahmat Ullah — Full Stack Developer",
+    description: "Full Stack Developer — Next.js, React, Node.js, MongoDB, PostgreSQL, AI. 2+ years experience. Pakistan-based, remote-friendly.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function AboutPage() {
   const breadcrumbs = breadcrumbSchema([

@@ -1,14 +1,32 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
 import { getAllSkillCategories } from "../data/skills";
+import { skillsPageKeywords } from "../lib/keywords";
 
-export const metadata = createPageMetadata(
-  "Technical Skills",
-  "Rahmat Ullah's complete technical skill set — React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, Redux Toolkit, Socket.IO, React Native, OpenAI, Stripe, and more. Grouped by category.",
-  "/skills"
-);
+export const metadata = {
+  title: "Technical Skills — Rahmat Ullah | Next.js, React, Node.js, MongoDB, PostgreSQL",
+  description:
+    "Complete technical skill set of Rahmat Ullah — Full Stack Developer. Frontend: React.js, Next.js, Vue.js, TypeScript, JavaScript, React Native, Tailwind CSS. Backend: Node.js, Express.js, REST APIs, JWT, NextAuth.js. Databases: MongoDB, PostgreSQL, MySQL, SQL. Tools: Redux Toolkit, Socket.IO, Agora, OpenAI, Stripe, Vercel, Git.",
+  keywords: skillsPageKeywords,
+  alternates: { canonical: "/skills" },
+  openGraph: {
+    title: "Technical Skills — Rahmat Ullah | Full Stack Developer",
+    description:
+      "React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, Redux Toolkit, Socket.IO, React Native, OpenAI, Stripe — complete technical stack of Full Stack Developer Rahmat Ullah.",
+    url: "https://rahmatullah.dev/skills",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Rahmat Ullah Technical Skills — Full Stack Developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "Technical Skills — Rahmat Ullah | Next.js, React, Node.js, MongoDB",
+    description: "Full skill set: React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, Socket.IO, React Native, OpenAI, Stripe & more.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function SkillsPage() {
   const categories = getAllSkillCategories();

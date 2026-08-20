@@ -1,14 +1,33 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactForm from "../components/shared/ContactForm";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
+import { contactPageKeywords } from "../lib/keywords";
 
-export const metadata = createPageMetadata(
-  "Contact",
-  "Get in touch with Rahmat Ullah — Full Stack Developer. Available for full-time positions, freelance projects, and collaboration. Contact via email or the contact form.",
-  "/contact"
-);
+export const metadata = {
+  title: "Contact — Hire Rahmat Ullah | Full Stack Developer Available for Work",
+  description:
+    "Contact Rahmat Ullah — Full Stack Developer available for hire. Open to full-time positions, contract work, and freelance projects. Specializing in Next.js, React, Node.js, MongoDB, PostgreSQL, and AI integration. Remote-friendly. Based in Rawalpindi, Pakistan. Email: baheer224@gmail.com. Responds within 24 hours.",
+  keywords: contactPageKeywords,
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact — Hire Rahmat Ullah | Full Stack Developer",
+    description:
+      "Full Stack Developer available for hire — full-time, contract & freelance. Next.js, React, Node.js, AI. Remote-friendly. Get in touch today.",
+    url: "https://rahmatullah.dev/contact",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Contact Rahmat Ullah — Full Stack Developer for Hire" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "Contact Rahmat Ullah — Full Stack Developer for Hire",
+    description: "Full Stack Developer available for full-time, contract & freelance. Next.js, React, Node.js. Remote-friendly. Responds in 24h.",
+    images: ["/og-image.jpg"],
+  },
+};
+
 
 const contactInfo = [
   {

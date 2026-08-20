@@ -1,15 +1,46 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
 import { getAllBlogPosts } from "../data/blog";
 import BlogCard from "../components/shared/BlogCard";
+import { blogPageKeywords } from "../lib/keywords";
 
-export const metadata = createPageMetadata(
-  "Technical Blog",
-  "Developer blog by Rahmat Ullah — practical articles on Next.js, React, Node.js, TypeScript, MongoDB, PostgreSQL, AI development, and modern web development best practices.",
-  "/blog"
-);
+export const metadata = {
+  title: "Technical Blog — Rahmat Ullah | Next.js, React, Node.js Developer Articles",
+  description:
+    "Practical developer articles by Rahmat Ullah — Full Stack Developer. Topics: Next.js App Router, React Server Components, Node.js REST APIs, Socket.IO real-time apps, OpenAI integration, TypeScript, MongoDB, PostgreSQL, authentication, performance optimization, SEO, React Native & system design. Real production experience, actionable insights.",
+  keywords: [
+    ...blogPageKeywords,
+    "Next.js App Router tutorial 2024",
+    "Next.js App Router tutorial 2025",
+    "React Server Components guide",
+    "Socket.IO Node.js tutorial",
+    "OpenAI Next.js integration guide",
+    "Next.js SEO metadata API guide",
+    "full stack developer blog",
+    "MERN developer blog",
+    "developer technical articles",
+    "web development insights",
+    "programmer articles Pakistan",
+  ],
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Technical Blog — Rahmat Ullah | Full Stack Developer",
+    description:
+      "Practical articles on Next.js, React, Node.js, TypeScript, MongoDB, PostgreSQL, Socket.IO & AI development. Real production insights by a Full Stack Developer.",
+    url: "https://rahmatullah.dev/blog",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Rahmat Ullah Technical Blog — Developer Articles" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "Technical Blog — Rahmat Ullah | Developer Articles",
+    description: "Next.js, React, Node.js, Socket.IO, OpenAI & SEO articles. Real production insights from a Full Stack Developer.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function BlogPage() {
   const posts = getAllBlogPosts();

@@ -1,13 +1,31 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
+import { servicesPageKeywords } from "../lib/keywords";
 
-export const metadata = createPageMetadata(
-  "Services",
-  "Full Stack development services by Rahmat Ullah — Next.js development, React development, backend API development, database design, AI integration, real-time applications, and React Native mobile apps.",
-  "/services"
-);
+export const metadata = {
+  title: "Development Services — Hire Rahmat Ullah | Next.js, React, Node.js Developer",
+  description:
+    "Professional web development services by Rahmat Ullah — Full Stack Developer for hire. Services: Next.js full-stack development, React.js development, Node.js & REST API development, MongoDB & PostgreSQL database design, OpenAI AI integration, Socket.IO real-time apps, React Native mobile development, and Stripe payment integration. Remote-friendly.",
+  keywords: servicesPageKeywords,
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Development Services — Hire Rahmat Ullah | Full Stack Developer",
+    description:
+      "Hire Rahmat Ullah for Next.js, React, Node.js, AI integration, real-time apps, mobile development & Stripe payments. Professional full stack development services.",
+    url: "https://rahmatullah.dev/services",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Development Services — Hire Rahmat Ullah — Full Stack Developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "Development Services — Hire Rahmat Ullah | Full Stack Developer",
+    description: "Next.js, React, Node.js, AI, real-time, mobile & payments development. Hire Full Stack Developer Rahmat Ullah remotely.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 const services = [
   {

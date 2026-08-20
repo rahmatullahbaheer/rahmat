@@ -1,14 +1,43 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
 import { getAllExperiences } from "../data/experience";
+import { experiencePageKeywords } from "../lib/keywords";
 
-export const metadata = createPageMetadata(
-  "Work Experience",
-  "Rahmat Ullah's professional experience as a Full Stack Developer — Must Services, M Techub LLC, Alphinex Solutions, WQ Softwares, NausalTech, and KPITB. 2+ years building Next.js, React, and Node.js applications.",
-  "/experience"
-);
+export const metadata = {
+  title: "Work Experience — Rahmat Ullah | Full Stack Developer Career History",
+  description:
+    "Professional experience of Rahmat Ullah — Full Stack Developer at Must Services, M Techub LLC, Alphinex Solutions, WQ Softwares, NausalTech, and KPITB. 2+ years building production applications with Next.js, React, Node.js, MongoDB, PostgreSQL, Socket.IO, Agora, Zoom SDK, Stripe, and OpenAI API.",
+  keywords: [
+    ...experiencePageKeywords,
+    "Must Services developer",
+    "M Techub LLC developer",
+    "Alphinex Solutions developer",
+    "WQ Softwares developer",
+    "NausalTech developer",
+    "KPITB developer",
+    "developer work history Pakistan",
+    "full stack developer career timeline",
+    "professional developer experience 2 years",
+  ],
+  alternates: { canonical: "/experience" },
+  openGraph: {
+    title: "Work Experience — Rahmat Ullah | Full Stack Developer",
+    description:
+      "2+ years of full stack development experience across 6 companies. Next.js, React, Node.js, MongoDB, PostgreSQL, AI integrations, real-time systems & mobile development.",
+    url: "https://rahmatullah.dev/experience",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Rahmat Ullah Work Experience — Full Stack Developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "Work Experience — Rahmat Ullah | Full Stack Developer",
+    description: "2+ years full stack experience — Next.js, React, Node.js, MongoDB, AI, real-time. 6 companies across multiple industries.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function ExperiencePage() {
   const experiences = getAllExperiences();

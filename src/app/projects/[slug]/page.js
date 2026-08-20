@@ -17,23 +17,55 @@ export async function generateMetadata({ params }) {
     return { title: "Project Not Found" };
   }
 
+  const techKeywords = project.technologies.flatMap((tech) => [
+    tech,
+    `${tech} developer`,
+    `${tech} project`,
+    `${tech} web application`,
+  ]);
+
   return {
-    title: `${project.title} — Full Stack Project`,
-    description: project.shortDescription,
+    title: `${project.title} — Full Stack Project | Rahmat Ullah`,
+    description: `${project.shortDescription} Built by Rahmat Ullah using ${project.technologies.slice(0, 6).join(", ")}. Production-grade full stack application with real-world requirements.`,
+    keywords: [
+      project.title,
+      ...techKeywords,
+      "full stack project",
+      "MERN stack project",
+      "Next.js project",
+      "React project",
+      "production web application",
+      "Rahmat Ullah project",
+      project.category,
+      `${project.category} developer`,
+      `${project.category} web app`,
+    ],
     alternates: { canonical: `/projects/${slug}` },
     openGraph: {
-      title: `${project.title} | Rahmat Ullah`,
-      description: project.shortDescription,
+      title: `${project.title} | Rahmat Ullah — Full Stack Developer`,
+      description: `${project.shortDescription} Technologies: ${project.technologies.slice(0, 8).join(", ")}.`,
       url: `https://rahmatullah.dev/projects/${slug}`,
       type: "website",
+      siteName: "Rahmat Ullah — Full Stack Developer",
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: `${project.title} — Full Stack Project by Rahmat Ullah`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
+      creator: "@rahmatullah_dev",
       title: `${project.title} | Rahmat Ullah`,
-      description: project.shortDescription,
+      description: `${project.shortDescription} Built with ${project.technologies.slice(0, 5).join(", ")}.`,
+      images: ["/og-image.jpg"],
     },
   };
 }
+
 
 export default async function ProjectDetailPage({ params }) {
   const { slug } = await params;

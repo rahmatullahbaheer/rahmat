@@ -1,15 +1,46 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/shared/ProjectCard";
+import { projectsPageKeywords } from "../lib/keywords";
 
-export const metadata = createPageMetadata(
-  "Projects",
-  "Explore Rahmat Ullah's portfolio of full-stack web applications — CareerBooster AI, MCare Hospital System, Oferta Marketplace, and more. Built with Next.js, React, Node.js, MongoDB, and PostgreSQL.",
-  "/projects"
-);
+export const metadata = {
+  title: "Projects Portfolio — Rahmat Ullah | Full Stack Developer Work",
+  description:
+    "Portfolio of 9 full-stack web applications by Rahmat Ullah — CareerBooster AI (Next.js, OpenAI, Stripe), MCare Hospital System (Next.js, Zoom SDK), Oferta Marketplace (React, Socket.IO, Agora), fleet management, inventory management, EPOS, real estate, e-commerce & IoT systems. Built with Next.js, React, Node.js, MongoDB, PostgreSQL.",
+  keywords: [
+    ...projectsPageKeywords,
+    "CareerBooster AI portfolio",
+    "MCare hospital management Next.js",
+    "Oferta marketplace Socket.IO",
+    "Next.js OpenAI project",
+    "React Node.js portfolio",
+    "MERN stack project examples",
+    "full stack portfolio 2024",
+    "full stack portfolio 2025",
+    "Next.js developer portfolio projects",
+    "real-time app portfolio",
+    "AI web app portfolio",
+  ],
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    title: "Projects Portfolio — Rahmat Ullah | Full Stack Developer",
+    description:
+      "9 production-grade full-stack projects: AI SaaS, hospital management, marketplace with live streaming, fleet & inventory systems, EPOS, real estate, e-commerce & IoT.",
+    url: "https://rahmatullah.dev/projects",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Rahmat Ullah Projects Portfolio — Full Stack Developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "Projects Portfolio — Rahmat Ullah | Full Stack Developer",
+    description: "9 production projects: AI SaaS, hospital system, marketplace, fleet management, EPOS & more. Next.js, React, Node.js, MongoDB.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function ProjectsPage() {
   const breadcrumbs = breadcrumbSchema([

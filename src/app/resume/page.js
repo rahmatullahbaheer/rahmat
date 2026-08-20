@@ -1,13 +1,49 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { createPageMetadata } from "../lib/seo";
 import { breadcrumbSchema } from "../lib/structured-data";
 
-export const metadata = createPageMetadata(
-  "Resume",
-  "View and download Rahmat Ullah's resume — Full Stack Developer with expertise in Next.js, React, Node.js, MongoDB, PostgreSQL, and more.",
-  "/resume"
-);
+export const metadata = {
+  title: "Resume — Rahmat Ullah | Full Stack Developer CV Download",
+  description:
+    "View and download the resume of Rahmat Ullah — Full Stack Developer (MERN Stack). Skills: Next.js, React.js, Node.js, MongoDB, PostgreSQL, TypeScript, JavaScript, Redux Toolkit, Socket.IO, React Native, OpenAI, Stripe. 2+ years professional experience. 9 production projects. Available for hire worldwide.",
+  keywords: [
+    "Rahmat Ullah resume",
+    "Rahmat Ullah CV",
+    "Rahmat Ullah developer resume",
+    "full stack developer resume",
+    "MERN developer resume",
+    "Next.js developer resume",
+    "React developer resume",
+    "Node.js developer resume",
+    "developer CV download",
+    "full stack developer CV",
+    "JavaScript developer resume",
+    "TypeScript developer resume",
+    "MongoDB developer resume",
+    "PostgreSQL developer resume",
+    "developer resume Pakistan",
+    "developer resume 2024",
+    "developer resume 2025",
+    "hire full stack developer resume",
+  ],
+  alternates: { canonical: "/resume" },
+  openGraph: {
+    title: "Resume — Rahmat Ullah | Full Stack Developer",
+    description:
+      "Download the resume of Rahmat Ullah — Full Stack Developer with Next.js, React, Node.js, MongoDB, PostgreSQL & AI expertise. 2+ years, 9 production projects.",
+    url: "https://rahmatullah.dev/resume",
+    type: "website",
+    siteName: "Rahmat Ullah — Full Stack Developer",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Resume — Rahmat Ullah Full Stack Developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@rahmatullah_dev",
+    title: "Resume — Rahmat Ullah | Full Stack Developer CV",
+    description: "Download resume of Rahmat Ullah — Next.js, React, Node.js, MongoDB, PostgreSQL, AI. 2+ years experience. Available for hire.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 const skills = [
   { category: "Frontend", items: ["Next.js", "React.js", "Vue.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"] },
