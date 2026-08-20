@@ -126,7 +126,7 @@ export const experiences = [
   {
     id: "nausaltech",
     company: "NausalTech",
-    position: "MERN Stack Developer",
+    position: "Frontend Developer (Internship)",
     type: "Internship",
     startDate: "2022",
     endDate: "2022",

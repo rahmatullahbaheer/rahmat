@@ -38,7 +38,7 @@ export const experiences = [
     startDate: "2023",
     endDate: "2024",
     isCurrent: false,
-    location: "On-site",
+    location: "Remote",
     description:
       "Developed multiple full-stack applications for US-based clients. Worked across the complete development lifecycle from requirements gathering to production deployment, with a focus on Next.js applications with advanced SEO optimization.",
     responsibilities: [
@@ -126,12 +126,12 @@ export const experiences = [
   {
     id: "nausaltech",
     company: "NausalTech",
-    position: "MERN Stack Developer",
+    position: "Frontend Developer (Internship)",
     type: "Internship",
     startDate: "2022",
     endDate: "2022",
     isCurrent: false,
-    location: "On-site",
+    location: "Remote",
     description:
       "Completed a frontend development internship focused on React.js and modern CSS frameworks. Built and maintained web interfaces and learned industry best practices.",
     responsibilities: [

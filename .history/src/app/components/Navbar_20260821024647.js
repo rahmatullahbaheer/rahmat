@@ -25,6 +25,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname]);
@@ -32,10 +37,6 @@ export default function Navbar() {
   function isActive(href) {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
-  }
-
-  function handleNavClick() {
-    setMenuOpen(false);
   }
 
   return (
@@ -137,7 +138,6 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  onClick={handleNavClick}
                   className={`block px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                     isActive(link.href)
                       ? "text-orange-400 bg-orange-500/10"
@@ -152,14 +152,12 @@ export default function Navbar() {
             <li className="pt-3 border-t border-slate-800 flex gap-3">
               <Link
                 href="/resume"
-                onClick={handleNavClick}
                 className="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-sm font-semibold text-slate-300 hover:border-orange-500/50 hover:text-white transition-all"
               >
                 Resume
               </Link>
               <Link
                 href="/contact"
-                onClick={handleNavClick}
                 className="flex-1 text-center px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-orange-500 to-orange-600"
               >
                 Hire Me
