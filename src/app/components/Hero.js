@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { profile } from "../data/profile";
+import { featuredTechStack } from "../data/skills";
 
 export default function Hero() {
   const badges = [
@@ -8,14 +10,7 @@ export default function Hero() {
     { label: "Performance Driven", icon: "🚀" },
   ];
 
-  const techIcons = [
-    { name: "React", bg: "#61dafb15", border: "#61dafb40", text: "#61dafb", symbol: "⚛" },
-    { name: "Next.js", bg: "#ffffff15", border: "#ffffff30", text: "#ffffff", symbol: "▲" },
-    { name: "TypeScript", bg: "#3178c615", border: "#3178c640", text: "#3178c6", symbol: "TS" },
-    { name: "JavaScript", bg: "#f7df1e15", border: "#f7df1e40", text: "#f7df1e", symbol: "JS" },
-    { name: "Node.js", bg: "#68a06315", border: "#68a06340", text: "#68a063", symbol: "⬡" },
-    { name: "MongoDB", bg: "#47a24815", border: "#47a24840", text: "#47a248", symbol: "🍃" },
-  ];
+  const techIcons = featuredTechStack;
 
   return (
     <section id="home" className="min-h-screen bg-[#0a0e1a] relative flex items-center pt-[100px] pb-20 overflow-hidden">
@@ -40,17 +35,16 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-white leading-[1.15] mb-5 tracking-tight">
               <span className="block text-slate-400 text-2xl sm:text-3xl font-semibold mb-1">Hi, I&apos;m</span>
               <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(249,115,22,0.3)]">
-                Rahmat Ullah
+                {profile.name}
               </span>
               <span className="block text-2xl sm:text-3xl font-bold text-white/90 mt-2">
-                Full Stack Developer
+                {profile.title}
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-slate-300 text-base sm:text-lg max-w-xl leading-relaxed mb-3 font-normal">
-              MERN Stack &amp; Next.js Developer building scalable web applications, 
-              AI-powered features, and real-time systems for businesses worldwide.
+              MERN Stack and Next.js Developer building scalable web applications, AI-powered features, real-time systems, and cross-platform mobile applications.
             </p>
             <p className="text-slate-400 text-sm max-w-xl leading-relaxed mb-6">
               Specialized in <span className="text-orange-400 font-medium">Next.js</span> · <span className="text-orange-400 font-medium">React</span> · <span className="text-orange-400 font-medium">Node.js</span> · <span className="text-orange-400 font-medium">MongoDB</span> · <span className="text-orange-400 font-medium">PostgreSQL</span>
@@ -163,12 +157,12 @@ export default function Hero() {
                     <span className="block text-[10px] sm:text-[11px] text-slate-400 leading-tight mt-0.5">Years<br/>Experience</span>
                   </div>
                   <div className="px-1.5">
-                    <span className="block text-lg sm:text-xl font-extrabold text-orange-500">15+</span>
-                    <span className="block text-[10px] sm:text-[11px] text-slate-400 leading-tight mt-0.5">Projects<br/>Completed</span>
+                    <span className="block text-lg sm:text-xl font-extrabold text-orange-500">9</span>
+                    <span className="block text-[10px] sm:text-[11px] text-slate-400 leading-tight mt-0.5">CV<br/>Projects</span>
                   </div>
                   <div className="px-1.5">
-                    <span className="block text-lg sm:text-xl font-extrabold text-orange-500">10+</span>
-                    <span className="block text-[10px] sm:text-[11px] text-slate-400 leading-tight mt-0.5">Happy<br/>Clients</span>
+                    <span className="block text-lg sm:text-xl font-extrabold text-orange-500">BSCS</span>
+                    <span className="block text-[10px] sm:text-[11px] text-slate-400 leading-tight mt-0.5">Abasyn<br/>University</span>
                   </div>
                 </div>
               </div>

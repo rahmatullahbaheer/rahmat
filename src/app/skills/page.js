@@ -7,13 +7,13 @@ import { skillsPageKeywords } from "../lib/keywords";
 export const metadata = {
   title: "Technical Skills — Rahmat Ullah | Next.js, React, Node.js, MongoDB, PostgreSQL",
   description:
-    "Complete technical skill set of Rahmat Ullah — Full Stack Developer. Frontend: React.js, Next.js, Vue.js, TypeScript, JavaScript, React Native, Tailwind CSS. Backend: Node.js, Express.js, REST APIs, JWT, NextAuth.js. Databases: MongoDB, PostgreSQL, MySQL, SQL. Tools: Redux Toolkit, Socket.IO, Agora, OpenAI, Stripe, Vercel, Git.",
+    "Technical skills of Rahmat Ullah — Full Stack Developer. JavaScript, TypeScript, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, SQL, SQLite, Socket.IO, Agora, OpenAI, React, React Native, Expo, Vue.js, Vuex, Pinia, Tailwind CSS, Ant Design, shadcn/ui, Material UI, Git, Vercel, Namecheap, and CI/CD.",
   keywords: skillsPageKeywords,
   alternates: { canonical: "/skills" },
   openGraph: {
     title: "Technical Skills — Rahmat Ullah | Full Stack Developer",
     description:
-      "React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, Redux Toolkit, Socket.IO, React Native, OpenAI, Stripe — complete technical stack of Full Stack Developer Rahmat Ullah.",
+      "React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, Redux Toolkit, Socket.IO, React Native, Expo, Vue.js, OpenAI, and more.",
     url: "https://rahmatullah.dev/skills",
     type: "website",
     siteName: "Rahmat Ullah — Full Stack Developer",
@@ -23,7 +23,7 @@ export const metadata = {
     card: "summary_large_image",
     creator: "@rahmatullah_dev",
     title: "Technical Skills — Rahmat Ullah | Next.js, React, Node.js, MongoDB",
-    description: "Full skill set: React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, Socket.IO, React Native, OpenAI, Stripe & more.",
+    description: "Full skill set: React, Next.js, Node.js, TypeScript, MongoDB, PostgreSQL, Socket.IO, React Native, Expo, Vue.js, OpenAI, and more.",
     images: ["/og-image.jpg"],
   },
 };
@@ -54,8 +54,7 @@ export default function SkillsPage() {
             <span className="inline-block text-orange-500 font-semibold text-xs tracking-widest uppercase mb-3">Expertise</span>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">Technical Skills</h1>
             <p className="text-slate-400 text-base leading-relaxed max-w-2xl">
-              A comprehensive skill set built through real-world project experience across multiple industries. 
-              Every technology listed has been used in production applications.
+              Skills and tools listed in my CV, covering web, mobile, database, UI, deployment, real-time, and AI development.
             </p>
           </div>
 
@@ -82,13 +81,6 @@ export default function SkillsPage() {
                       <p className="text-white font-semibold text-xs group-hover:text-orange-400 transition-colors">
                         {skill.name}
                       </p>
-                      {/* Skill bar */}
-                      <div className="mt-2 h-0.5 bg-slate-800 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-orange-500 to-amber-400 rounded-full"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
                     </div>
                   ))}
                 </div>

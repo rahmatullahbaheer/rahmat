@@ -2,17 +2,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { breadcrumbSchema } from "../lib/structured-data";
 import { aboutPageKeywords } from "../lib/keywords";
+import { profile } from "../data/profile";
 
 export const metadata = {
   title: "About Rahmat Ullah — Full Stack Developer | MERN Stack",
   description:
-    "Learn about Rahmat Ullah, a Full Stack Developer (MERN Stack) with 2+ years of professional experience building scalable web applications using Next.js, React.js, Node.js, MongoDB, and PostgreSQL. Specializing in AI integration, real-time apps, and React Native mobile development. Based in Rawalpindi, Pakistan — available globally.",
+    "Learn about Rahmat Ullah, a Full Stack Developer (MERN Stack) with 2+ years of experience building scalable web applications using Next.js, React.js, Node.js, MongoDB, and PostgreSQL. Skilled in AI features, real-time applications, and React Native mobile development. Based in Rawalpindi, Pakistan.",
   keywords: aboutPageKeywords,
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Rahmat Ullah — Full Stack Developer | MERN Stack & Next.js",
     description:
-      "Full Stack Developer with 2+ years building scalable web apps. Expert in Next.js, React, Node.js, MongoDB, PostgreSQL, TypeScript, AI integrations & React Native. Based in Pakistan — remote-friendly.",
+      "Full Stack Developer with 2+ years building scalable web apps with Next.js, React, Node.js, MongoDB, PostgreSQL, TypeScript, AI features, and React Native.",
     url: "https://rahmatullah.dev/about",
     type: "website",
     siteName: "Rahmat Ullah — Full Stack Developer",
@@ -22,7 +23,7 @@ export const metadata = {
     card: "summary_large_image",
     creator: "@rahmatullah_dev",
     title: "About Rahmat Ullah — Full Stack Developer",
-    description: "Full Stack Developer — Next.js, React, Node.js, MongoDB, PostgreSQL, AI. 2+ years experience. Pakistan-based, remote-friendly.",
+    description: "Full Stack Developer — Next.js, React, Node.js, MongoDB, PostgreSQL, AI, and React Native. 2+ years of experience. Based in Pakistan.",
     images: ["/og-image.jpg"],
   },
 };
@@ -67,30 +68,22 @@ export default function AboutPage() {
             <h2 className="text-xl font-bold text-white mb-5">Professional Background</h2>
             <div className="space-y-4 text-slate-300 text-base leading-relaxed">
               <p>
-                I&apos;m <strong className="text-white">Rahmat Ullah</strong>, a Full Stack Developer specializing in the MERN stack 
-                and Next.js with over 2 years of professional experience building scalable web applications. 
-                My focus is on creating clean, maintainable solutions that solve real business problems — 
-                from SaaS platforms to hospital management systems to real-time marketplaces.
+                I&apos;m <strong className="text-white">{profile.name}</strong>, a Full Stack Developer specializing in the MERN stack and Next.js. {profile.summary}
               </p>
               <p>
-                I work across the complete development lifecycle: from database schema design and API architecture 
-                to responsive frontends and production deployments. I&apos;ve built applications with 
+                I work across the complete development lifecycle, from database schema design and API architecture to responsive interfaces and deployment. My CV includes work with 
                 <span className="text-orange-400 font-medium"> Next.js</span>, 
                 <span className="text-orange-400 font-medium"> React</span>, 
                 <span className="text-orange-400 font-medium"> Node.js</span>, 
                 <span className="text-orange-400 font-medium"> MongoDB</span>, 
                 <span className="text-orange-400 font-medium"> PostgreSQL</span>, 
-                and integrated technologies including OpenAI, Stripe, Socket.IO, Zoom SDK, and Agora.
+                and technologies including OpenAI, Socket.IO, Zoom SDK, Agora, Git, Vercel, Namecheap, and CI/CD.
               </p>
               <p>
-                Beyond standard web development, I&apos;ve delivered AI-powered features using the OpenAI API, 
-                real-time messaging and live streaming systems, video conferencing integrations, 
-                cross-platform mobile applications with React Native and Expo, and e-commerce platforms 
-                with payment processing via Stripe.
+                My project experience includes AI-powered resume content, real-time chat and live streaming, video consultations, cross-platform React Native applications, ecommerce, inventory, financial management, and IoT smart irrigation.
               </p>
               <p>
-                I&apos;m based in Rawalpindi, Pakistan, and work with clients and companies remotely across different 
-                time zones. I&apos;m currently open to full-time, contract, and freelance opportunities.
+                I&apos;m based in {profile.location}.
               </p>
             </div>
           </div>
@@ -119,10 +112,10 @@ export default function AboutPage() {
           {/* Quick Info */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
             {[
-              { label: "Location", value: "Rawalpindi, PK" },
+              { label: "Location", value: profile.location },
               { label: "Experience", value: "2+ Years" },
-              { label: "Projects", value: "15+ Delivered" },
-              { label: "Availability", value: "Open to Work", highlight: true },
+              { label: "Projects", value: "9 CV Projects" },
+              { label: "Education", value: "BSCS, 2023" },
             ].map((item) => (
               <div key={item.label} className="bg-[#111827] border border-slate-800 rounded-xl p-4">
                 <span className="block text-slate-500 text-xs uppercase tracking-wider mb-1">{item.label}</span>

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${project.title} — Full Stack Project | Rahmat Ullah`,
-    description: `${project.shortDescription} Built by Rahmat Ullah using ${project.technologies.slice(0, 6).join(", ")}. Production-grade full stack application with real-world requirements.`,
+    description: `${project.shortDescription} CV project details and technologies: ${project.technologies.slice(0, 6).join(", ")}.`,
     keywords: [
       project.title,
       ...techKeywords,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
       "MERN stack project",
       "Next.js project",
       "React project",
-      "production web application",
+      "full stack web application",
       "Rahmat Ullah project",
       project.category,
       `${project.category} developer`,
@@ -120,6 +120,11 @@ export default async function ProjectDetailPage({ params }) {
             <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">{project.title}</h1>
             <p className="text-slate-300 text-lg leading-relaxed">{project.shortDescription}</p>
 
+            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4 text-sm text-slate-400">
+              {project.organization && <span>{project.organization}</span>}
+              {project.period && <span>{project.period}</span>}
+            </div>
+
             {/* Links */}
             {(project.liveUrl || project.githubUrl) && (
               <div className="flex gap-4 mt-6">
@@ -158,21 +163,9 @@ export default async function ProjectDetailPage({ params }) {
             <p className="text-slate-300 text-base leading-relaxed">{project.overview}</p>
           </section>
 
-          {/* Problem & Solution */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-            <section className="bg-[#111827] border border-slate-800 rounded-2xl p-6">
-              <h2 className="text-white font-bold text-base mb-3">🎯 The Problem</h2>
-              <p className="text-slate-400 text-sm leading-relaxed">{project.problem}</p>
-            </section>
-            <section className="bg-[#111827] border border-slate-800 rounded-2xl p-6">
-              <h2 className="text-white font-bold text-base mb-3">💡 The Solution</h2>
-              <p className="text-slate-400 text-sm leading-relaxed">{project.solution}</p>
-            </section>
-          </div>
-
-          {/* My Role */}
+          {/* Role */}
           <section className="bg-[#111827] border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8">
-            <h2 className="text-white font-bold text-xl mb-4">My Role</h2>
+            <h2 className="text-white font-bold text-xl mb-4">Role</h2>
             <p className="text-slate-300 text-base leading-relaxed">{project.role}</p>
           </section>
 
@@ -184,38 +177,6 @@ export default async function ProjectDetailPage({ params }) {
                 <li key={i} className="flex items-start gap-2.5 text-slate-300 text-sm">
                   <span className="text-orange-500 mt-0.5 flex-shrink-0">✓</span>
                   {feature}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Architecture */}
-          <section className="bg-[#111827] border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8">
-            <h2 className="text-white font-bold text-xl mb-4">Architecture &amp; Implementation</h2>
-            <p className="text-slate-300 text-base leading-relaxed">{project.architecture}</p>
-          </section>
-
-          {/* Challenges */}
-          <section className="bg-[#111827] border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8">
-            <h2 className="text-white font-bold text-xl mb-5">Technical Challenges</h2>
-            <ul className="space-y-3">
-              {project.challenges.map((challenge, i) => (
-                <li key={i} className="flex items-start gap-3 text-slate-300 text-sm leading-relaxed">
-                  <span className="text-orange-500 font-bold flex-shrink-0 mt-0.5">{i + 1}.</span>
-                  {challenge}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Performance */}
-          <section className="bg-[#111827] border border-slate-800 rounded-2xl p-6 sm:p-8 mb-10">
-            <h2 className="text-white font-bold text-xl mb-5">Performance Considerations</h2>
-            <ul className="space-y-2.5">
-              {project.performance.map((item, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-slate-300 text-sm leading-relaxed">
-                  <span className="text-orange-400 flex-shrink-0 mt-0.5">⚡</span>
-                  {item}
                 </li>
               ))}
             </ul>

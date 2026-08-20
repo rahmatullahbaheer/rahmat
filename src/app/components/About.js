@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { profile } from "../data/profile";
 
 export default function About() {
   return (
@@ -31,7 +32,7 @@ export default function About() {
             </h2>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-              I&apos;m a passionate Full Stack Developer with 2+ years of experience building scalable web applications using MongoDB, Express.js, React.js, Node.js, and Next.js for server-side rendering. Skilled in developing cross-platform mobile applications with React Native and Expo. I focus on creating clean, maintainable solutions, optimizing performance, and delivering responsive, user-friendly digital products.
+              {profile.summary}
             </p>
 
             {/* 4 Metadata Cards */}
@@ -41,7 +42,7 @@ export default function About() {
                   <span className="text-orange-400">👤</span> Name
                 </span>
                 <span className="text-xs sm:text-sm font-semibold text-white truncate">
-                  Rahmat Ullah
+                  {profile.name}
                 </span>
               </div>
 
@@ -50,7 +51,7 @@ export default function About() {
                   <span className="text-orange-400">📍</span> Location
                 </span>
                 <span className="text-xs sm:text-sm font-semibold text-white truncate">
-                  Rawalpindi, PK
+                  {profile.location}
                 </span>
               </div>
 
@@ -65,10 +66,10 @@ export default function About() {
 
               <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 flex flex-col gap-1">
                 <span className="text-[11px] text-slate-400 font-medium flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" /> Availability
+                  <span className="text-orange-400">📞</span> Phone
                 </span>
-                <span className="text-xs sm:text-sm font-semibold text-green-400 truncate">
-                  Open to Work
+                <span className="text-xs sm:text-sm font-semibold text-white truncate">
+                  {profile.phone}
                 </span>
               </div>
             </div>

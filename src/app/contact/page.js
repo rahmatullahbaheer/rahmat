@@ -3,17 +3,18 @@ import Footer from "../components/Footer";
 import ContactForm from "../components/shared/ContactForm";
 import { breadcrumbSchema } from "../lib/structured-data";
 import { contactPageKeywords } from "../lib/keywords";
+import { profile } from "../data/profile";
 
 export const metadata = {
-  title: "Contact — Hire Rahmat Ullah | Full Stack Developer Available for Work",
+  title: "Contact Rahmat Ullah | Full Stack Developer",
   description:
-    "Contact Rahmat Ullah — Full Stack Developer available for hire. Open to full-time positions, contract work, and freelance projects. Specializing in Next.js, React, Node.js, MongoDB, PostgreSQL, and AI integration. Remote-friendly. Based in Rawalpindi, Pakistan. Email: baheer224@gmail.com. Responds within 24 hours.",
+    "Contact Rahmat Ullah, a Full Stack Developer (MERN Stack) based in Rawalpindi, Pakistan. Email: baheer224@gmail.com. Skills include Next.js, React.js, Node.js, MongoDB, PostgreSQL, React Native, Expo, AI, real-time applications, and Vue.js.",
   keywords: contactPageKeywords,
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact — Hire Rahmat Ullah | Full Stack Developer",
     description:
-      "Full Stack Developer available for hire — full-time, contract & freelance. Next.js, React, Node.js, AI. Remote-friendly. Get in touch today.",
+      "Full Stack Developer (MERN Stack) with experience in Next.js, React, Node.js, AI features, real-time applications, and mobile development.",
     url: "https://rahmatullah.dev/contact",
     type: "website",
     siteName: "Rahmat Ullah — Full Stack Developer",
@@ -22,8 +23,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@rahmatullah_dev",
-    title: "Contact Rahmat Ullah — Full Stack Developer for Hire",
-    description: "Full Stack Developer available for full-time, contract & freelance. Next.js, React, Node.js. Remote-friendly. Responds in 24h.",
+    title: "Contact Rahmat Ullah — Full Stack Developer",
+    description: "Full Stack Developer (MERN Stack) — Next.js, React, Node.js, MongoDB, PostgreSQL, AI, real-time applications, and React Native.",
     images: ["/og-image.jpg"],
   },
 };
@@ -37,8 +38,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "baheer224@gmail.com",
-    href: "mailto:baheer224@gmail.com",
+    value: profile.email,
+    href: `mailto:${profile.email}`,
   },
   {
     icon: (
@@ -48,8 +49,18 @@ const contactInfo = [
       </svg>
     ),
     label: "Location",
-    value: "Rawalpindi, Pakistan (Remote-friendly)",
+    value: profile.location,
     href: null,
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    ),
+    label: "Phone",
+    value: profile.phone,
+    href: `tel:${profile.phoneHref}`,
   },
 ];
 
@@ -78,23 +89,21 @@ export default function ContactPage() {
             <span className="inline-block text-orange-500 font-semibold text-xs tracking-widest uppercase mb-3">Get In Touch</span>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">Let&apos;s Work Together</h1>
             <p className="text-slate-400 text-base leading-relaxed max-w-xl mx-auto">
-              Whether you need a full-stack application, a Next.js project, backend APIs, or an AI-powered feature — 
-              I&apos;m available and ready to help.
+              Get in touch about full-stack web applications, Next.js projects, back-end APIs, AI-powered features, or React Native mobile applications.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
             {/* Left — Info */}
             <div className="lg:col-span-2 space-y-6">
-              {/* Availability */}
+              {/* Contact */}
               <div className="bg-[#111827] border border-slate-800 rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="w-3 h-3 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
-                  <h2 className="text-white font-bold">Currently Available</h2>
+                  <span className="w-3 h-3 rounded-full bg-orange-500 flex-shrink-0" />
+                  <h2 className="text-white font-bold">Contact Rahmat</h2>
                 </div>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Open to full-time positions, contract work, and freelance projects. 
-                  Typically respond within 24 hours.
+                  Based in {profile.location}. Use the form, email, or phone number below to start a conversation.
                 </p>
               </div>
 
@@ -120,11 +129,11 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* What I&apos;m Looking For */}
+              {/* Core Experience */}
               <div className="bg-[#111827] border border-slate-800 rounded-2xl p-6">
-                <h2 className="text-white font-bold mb-4">What I&apos;m Looking For</h2>
+                <h2 className="text-white font-bold mb-4">Core Experience</h2>
                 <ul className="space-y-2.5">
-                  {["Full-time developer roles", "Contract / freelance projects", "Long-term client partnerships", "Interesting technical challenges"].map((item) => (
+                  {["MERN and Next.js applications", "React Native and Expo mobile apps", "Real-time communication and video features", "PostgreSQL, MongoDB, and SQL databases"].map((item) => (
                     <li key={item} className="flex items-center gap-2.5 text-slate-400 text-sm">
                       <span className="text-orange-500">✓</span>
                       {item}
