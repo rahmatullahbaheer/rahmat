@@ -144,14 +144,14 @@ export default function Hero() {
               <div className="absolute w-[290px] sm:w-[320px] h-[290px] sm:h-[320px] rounded-full bg-gradient-to-tr from-orange-600 via-orange-500 to-amber-500 opacity-90 shadow-[0_0_80px_rgba(249,115,22,0.7)]" />
               
               {/* Profile Image with subtle cutout effect */}
-              <div className="relative z-10 w-[270px] sm:w-[300px] h-[370px] sm:h-[410px] overflow-hidden rounded-b-3xl">
+              <div className="relative z-10 w-[350px] sm:w-[400px] h-[370px] sm:h-[410px] overflow-hidden rounded-b-3xl">
                 <Image
                   src="/profile.png"
                   alt="Rahmat Ullah"
                   fill
                   priority
                   sizes="(max-width: 640px) 270px, 300px"
-                  className="object-cover object-top filter brightness-105 contrast-105"
+                  className="object-cover object-top filter bg-none brightness-105 contrast-105"
                 />
               </div>
 
