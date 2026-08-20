@@ -40,7 +40,7 @@ export default function ContactCTA() {
           </Link>
 
           <a
-            href="/Rahmat_Ullah_Resume.pdf"
+            href="/rahmat_ullah.pdf"
             download
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-slate-300 border border-slate-700 hover:border-orange-500/60 hover:text-white bg-slate-900/60 transition-all duration-300 hover:-translate-y-0.5 text-sm"
           >

@@ -141,7 +141,7 @@ export default function AboutPage() {
             <a href="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-300 border border-slate-700 hover:border-orange-500/50 hover:text-white transition-all hover:-translate-y-0.5">
               View My Projects
             </a>
-            <a href="/Rahmat_Ullah_Resume.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-300 border border-slate-700 hover:border-orange-500/50 hover:text-white transition-all hover:-translate-y-0.5">
+            <a href="/rahmat_ullah.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-300 border border-slate-700 hover:border-orange-500/50 hover:text-white transition-all hover:-translate-y-0.5">
               Download Resume
             </a>
           </div>

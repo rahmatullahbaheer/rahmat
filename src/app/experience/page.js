@@ -147,7 +147,7 @@ export default function ExperiencePage() {
               <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-[0_4px_15px_rgba(249,115,22,0.4)] transition-all hover:-translate-y-0.5">
                 Contact Me
               </a>
-              <a href="/Rahmat_Ullah_Resume.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-300 border border-slate-700 hover:border-orange-500/50 transition-all hover:-translate-y-0.5">
+              <a href="/rahmat_ullah.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-300 border border-slate-700 hover:border-orange-500/50 transition-all hover:-translate-y-0.5">
                 Download Resume
               </a>
             </div>

@@ -92,7 +92,7 @@ export default function ResumePage() {
               <p className="text-slate-400 text-sm mt-1">Rawalpindi, Pakistan · baheer224@gmail.com</p>
             </div>
             <a
-              href="/Rahmat_Ullah_Resume.pdf"
+              href="/rahmat_ullah.pdf"
               download
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-[0_4px_15px_rgba(249,115,22,0.4)] transition-all hover:-translate-y-0.5 flex-shrink-0"
             >
@@ -161,7 +161,7 @@ export default function ResumePage() {
           <div className="text-center">
             <p className="text-slate-400 text-sm mb-4">Get the complete resume with all project details</p>
             <a
-              href="/Rahmat_Ullah_Resume.pdf"
+              href="/rahmat_ullah.pdf"
               download
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-[0_4px_15px_rgba(249,115,22,0.4)] transition-all hover:-translate-y-0.5"
             >
